@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 import Menu from './MenuComponent';
 import Inform from './InformComponent';
@@ -13,6 +12,8 @@ import Login from './LoginComponent';
 import Myprofile from './MyprofileComponent';
 import Mycart from './MycartComponent';
 import Myorders from './MyordersComponent';
+import TawkMessenger from './TawkMessengerComponent';
+import Gmap from './GmapComponent';
 
 class Main extends Component {
   render() {
@@ -32,10 +33,9 @@ class Main extends Component {
           <Route path='/myprofile' element={<Myprofile />} />
           <Route path='/mycart' element={<Mycart />} />
           <Route path='/myorders' element={<Myorders />} />
+          <Route path='/gmap' element={<Gmap />} />
         </Routes>
-        <TawkMessengerReact
-          propertyId="6552d30acec6a912820f8bf4"
-          widgetId="1hf5ogoi2" />
+        <TawkMessenger />
       </div>
     );
   }
